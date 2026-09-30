@@ -1,0 +1,10 @@
+services:
+  apache:
+    build: ./
+    container_name: server-apacheSP23001
+    restart: always
+    volumes:
+      - ./proyectos:/var/www/html
+    ports:
+      - "8089:80"
+  
