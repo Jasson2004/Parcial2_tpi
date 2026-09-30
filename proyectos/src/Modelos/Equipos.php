@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Modelos\Equipo
+
 abstract class Equipo{
 
 private readonly string $codigo;
@@ -15,12 +17,25 @@ public abstract function diasMaximoPrestado(): int ;
 
 }
 
-class Laptop{
+class Laptop extends Equipo{
 
+public $codigo;
+public $nombre;
+public $diasMax;
+
+function diasMaximoPrestado(){
+$this->diaMax = 3;
+}
 }
 
 class Proyector{
-    
+public $codigo;
+public $nombre;
+public $diasMax;
+
+function diasMaximoPrestado(){
+$this->diaMax = 1;
+}
 }
 
 ?>
