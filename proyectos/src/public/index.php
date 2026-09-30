@@ -5,6 +5,15 @@ require __DIR__ ."/../../vendor/autoload.php";
 
 echo "hola";
 
+session_start();
+
+$_SESSION["alumno"] ??= [];
+
+if($_SERVER["REQUEST_METHOD"] === "POST"){
+
+echo "ESTOY EN POST";
+}
+
 ?>
 
 <!DOCTYPE html>
